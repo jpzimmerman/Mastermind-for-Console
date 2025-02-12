@@ -11,7 +11,7 @@ namespace Mastermind
 
             foreach (var i in Enumerable.Range(0,4))
             {
-                output.Append(random.Next(1, 6));
+                output.Append(random.Next(1, 7));
             }
             return output.ToString();
         }

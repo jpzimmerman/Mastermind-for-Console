@@ -33,7 +33,14 @@
                     Console.WriteLine($"I'm sorry, code '{guess}' wasn't valid.");
                     continue;
                 }
-                Console.WriteLine("Good guess, valid guess! Wrong tho.");
+                var feedback = CodeChecker.CheckCode(guess, output);
+                Console.WriteLine(feedback);
+
+                if (feedback == "++++")
+                {
+                    Console.WriteLine("You won, you guessed correctly! Please play again.");
+                    break;
+                }
 
             
             }
