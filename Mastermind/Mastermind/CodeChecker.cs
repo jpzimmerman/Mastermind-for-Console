@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Mastermind
 {
-    class CodeChecker
+    public class CodeChecker
     {
+        public static string CheckCode(string userInput, string secretCode)
+        {
+            return "";
+        }
     }
 }

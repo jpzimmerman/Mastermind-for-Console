@@ -8,7 +8,7 @@ namespace Mastermind
 {
     class Codemaker
     {
-        private readonly uint[] secretCode;
+        private readonly string secretCode;
 
         public Codemaker()
         {

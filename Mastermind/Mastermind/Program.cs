@@ -1,6 +1,4 @@
-﻿using System.Transactions;
-
-namespace Mastermind
+﻿namespace Mastermind
 {
     static internal class Program
     {
@@ -19,6 +17,10 @@ namespace Mastermind
 
             var output = CodeGenerator.GenerateCode();
 
+            // TESTING PURPOSES -- Let's see the code so we know the feedback is accurate
+            Console.WriteLine($"The code is: {output}");
+            Console.WriteLine();
+
             int numberOfGuesses = 10;
 
             for (int i = 0; i < numberOfGuesses; i++)
@@ -36,10 +38,6 @@ namespace Mastermind
             
             }
 
-            foreach (var i in output)
-            {
-                Console.Write(i);
-            }
         }
     }
 }
