@@ -1,5 +1,9 @@
 # Mastermind-for-Console
 
+![image](https://github.com/user-attachments/assets/b0da2915-d55b-4c5d-9a04-cf541b6af2ca)
+
+
+
 Repository for a text-based console app version of Mastermind, a codebreaking game created in 1970 by Mordecai Meirowitz
 <br><br>
 Game Rules:
