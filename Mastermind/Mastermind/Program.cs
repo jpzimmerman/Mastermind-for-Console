@@ -64,7 +64,6 @@ namespace Mastermind
             catch (Exception ex)
             {
                 Console.WriteLine($"Main program loop exception: {ex.Message}");
-                return;
             }
         }
     }

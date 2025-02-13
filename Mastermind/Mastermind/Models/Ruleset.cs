@@ -2,9 +2,13 @@
 {
     enum GameRule { AllowRepeatedDigits }
 
+    /// <summary>
+    /// RuleSet will allow players to change the behavior of the game based on adoption or rejection of commonly disputed rules,
+    /// such as whether or not the Codemaker's secret code may have repeating digits
+    /// </summary>
     class RuleSet
     {
-        private readonly Dictionary<GameRule, bool> GameRules = new Dictionary<GameRule, bool>();
+        private readonly Dictionary<GameRule, bool> GameRules = [];
 
         public RuleSet()
         {
