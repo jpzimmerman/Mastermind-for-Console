@@ -1,34 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Mastermind.Models;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Mastermind
 {
     public static class CodeChecker
     {
-        public static string CheckCode(string userInput, string secretCode)
+        public static string CheckCode(string userInput, string secretCode, GameOptions gameOptions)
         {
-            var output = new StringBuilder();
+            var hintTextBuilder = new StringBuilder();
+            var secretCodeDistinctDigits = secretCode.Distinct().ToList();
 
-            foreach (int i in Enumerable.Range(0, 4))
+            foreach (int i in Enumerable.Range(0, gameOptions.NumberOfDigitsInCode))
             {
                 if (userInput[i] == secretCode[i])
                 {
-                    output.Append('+');
+                    hintTextBuilder.Append('+');
+                    secretCodeDistinctDigits.Remove(userInput[i]);
                 }
-                else if (secretCode.Contains(userInput[i]))
+                else if (secretCodeDistinctDigits.Contains(userInput[i]))
                 {
-                    output.Append('-');
+                    hintTextBuilder.Append('-');
                 }
             }
-            var readyOutput = output.ToString()        
+            var hintText = hintTextBuilder.ToString()        
                 .ToCharArray();
-            //this array sort orders the plus signs before the minus signs
-            Array.Sort(readyOutput);
+            // Sorting the array to group the plus and minus signs and achieve the desired output format only works because the plus sign precedes the minus sign in the UTF character map
+            // We would have to group these characters in another way to retain the same behavior if hypothetically the encoding ever changed
+            Array.Sort(hintText);
             
-            return string.Join("", readyOutput);
+            return string.Join("", hintText);
         }
     }
 }

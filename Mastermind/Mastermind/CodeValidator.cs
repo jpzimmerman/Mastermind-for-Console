@@ -4,7 +4,7 @@ namespace Mastermind
 {
     public static class CodeValidator
     {
-        const string codePattern = "^[0-9]{4}$";
+        const string codePattern = "^[1-6]{4}$";
 
         public static bool ValidateCode(string codeInput) => Regex.IsMatch(codeInput, codePattern);
     }
