@@ -10,7 +10,7 @@ Game Rules:
 There are two players: an AI 'codemaker' and a human 'codebreaker.' The codemaker will generate a secret code according to parameters set within the appsettings.json file. By default, these parameters are as follows:<br>
 
 - Length of code is 4 digits<br>
-- Value of each individual digit is 1 < digit < 6<br><br>
+- Value of each individual digit is 1 =< digit =< 6<br><br>
 
 Player will have ten (10) chances to guess the secret code, and will receive feedback on the accuracy of their guess after each turn:<br>
 
